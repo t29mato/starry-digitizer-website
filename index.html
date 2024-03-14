@@ -8,17 +8,130 @@
   <!-- TODO: Add OGP -->
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="header_right">
       <h1 class="header_main-title">StarryDigitizer</h1>
     </div>
     <div class="header_left">
       <a class="header_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Contact</a>
       <a class="header_link" href="https://github.com/t29mato/starry-digitizer" target="_blank">GitHub</a>
-      <!--TODO: Update URL to 'https://app.digitizer.starrydata.org/' after setting the custom domain-->
-      <a class="header_link--launch-app" href="https://digitizer.starrydata.org/" target="_blank">Launch App</a>
+      <a class="header_link--launch-app" href="https://app.digitizer.starrydata.org/" target="_blank">Launch App</a>
     </div>
   </header>
+
+  <section id="intro" class="intro">
+    <p class="intro_catchcopy">Swiftly extract values from graph images<br>No installs needed, fully open source</p>
+    <div class="intro_demo-slides">
+      <img id="demo-slide-1" class="intro_demo-slides_img" src="images/kv-demo_1.png" alt="">
+      <img id="demo-slide-2" class="intro_demo-slides_img" src="images/kv-demo_2.png" alt="">
+      <img id="demo-slide-3" class="intro_demo-slides_img" src="images/kv-demo_3.png" alt="">
+      <img id="demo-slide-4" class="intro_demo-slides_img" src="images/kv-demo_4.png" alt="">
+    </div>
+    <p class="intro_description">
+      StarryDigitizer is an open source value extraction tool that operates in a web browser.
+      <br>
+      Users can upload any graph image and swiftly and accurately extract data values using multiple automated extraction logics.
+      <br>
+      Since the images are not sent tothe server, there is no need to worry about rights-related concerns.
+    </p>
+  </section>
+
+  <section id="features" class="features">
+    <h2 class="features_title">Features</h2>
+    <div class="features_contents">
+      <div class="features_contents_item">
+        <div class="features_contents_item_texts">
+          <h3 class="features_contents_item_title">Automatic Extraction<br>by Color</h3>
+          <p class="features_contents_item_summary">
+            The system automatically extracts values from the graph based on the specified color. 
+          </p>
+          <p class="features_contents_item_summary">
+            Color options are presented to the user automatically, utilizing color information within the graph image.
+          </p>
+          <p class="features_contents_item_summary">
+            There are two modes available: Line Extract mode, suitable for extracting line graphs, and Symbol Extract mode, ideal for extracting symbols in scatter plots.
+          </p>
+        </div>
+        <div class="features_contents_item_video">
+          <video src="videos/extraction-by-color.mp4" playsinline muted></video>
+        </div>
+      </div>
+      <div class="features_contents_item">
+        <div class="features_contents_item_texts">
+          <h3>Spline Interpolation</h3>
+          <p class="features_contents_item_summary">
+            In cases where automatic extraction based on color is challenging, especially with complex graph images, if its a curved graph, you can use the spline interpolation feature.
+          </p>
+          <p class="features_contents_item_summary">
+            This feature allows users to obtain values along the graph lines at any desired interval with minimal clicks.
+            <br>
+          </p>
+          <p class="features_contents_item_summary">
+            During the operation, the interpolation lines are updated in real-time, providing a clear visual indication of which portions of the graph values can be extracted with just a glance.
+          </p>
+        </div>
+        <div class="features_contents_item_video">
+          <video src="videos/spline-interpolation.mp4" playsinline muted></video>
+        </div>
+      </div>
+      <p class="features_link-to-docs">See all features in the <a hred="https://starrydigitizer.readthedocs.io/en/latest/" target="_blank">document</a></p>
+    </div>
+  </section>
+
+  <section id="why-starry" class="why-starry">
+    <h2 class="why-starry_title">Why "Starry"?</h2>
+    <p class="why-starry_description">
+      StarryDigitizer was originally developed as part of the web system of Starrydata project, 
+      <br>
+      which is aimed at building an open database of inorganic materials science experimental data, 
+      <br>
+      with the motivation to streamline the process of extracting graph data
+      <br>
+      and to obtain the most suitable data format for handling in the Starrydata system.
+    </p>
+    <p class="why-starry_description">
+      Our goal is not only to benefit Starrydata but also to develop
+      <br>
+      a valuable tool for anyone involved in collecting graph data.
+    </p>
+  </section>
+
+  <section id="contribute-us" class="contribute-us">
+    <h2 class="contribute-us_title">Contribute Us</h2>
+    <a href="https://github.com/t29mato/starry-digitizer/issues" target="_blank">
+      <img src="" alt="">
+    </a>
+    <p class="contribute-us_message">
+      If you have any requests for new features
+      <br>
+      or if you are willing to help with our development,
+      <br>
+      please feel free to create an issue on <a href="https://github.com/t29mato/starry-digitizer/issues" target="_blank">GitHub</a>.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="contact_title">Contact</h2>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Open Contact Form</a>
+  </section>
+
+  <footer id="foooter" class="footer">
+    <div class="footer_contents">
+      <div class="footer_links">
+        <div>
+          <a href="https://app.digitizer.starrydata.org/" target="_blank">SrarryDigitizer</a>
+          <a href="https://github.com/t29mato/starry-digitizer" target="_blank">GitHub Repository</a>
+        </div>
+        <div>
+          <a href="https://github.com/t29mato/starry-digitizer/releases" target="_blank">Release Notes</a>
+        </div>
+        <div>
+          <a href="https://starrydigitizer.readthedocs.io/en/latest/" target="_blank">Documentation</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
   <script src="main.js"></script>
 </body>
