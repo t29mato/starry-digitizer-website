@@ -1,0 +1,127 @@
+$breakpoint: (
+  sp: "screen and (max-width: 640px)",
+  tablet: "screen and (max-width: 796px)",
+  pc-wide: "screen and (min-width: 1080px)",
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+@mixin flex(
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $gap: 0,
+  $flex-direction: row,
+  $flex-wrap: wrap
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin posAbs($top: initial, $right: initial, $bottom: initial, $left: initial) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin posFixed($top: initial, $right: initial, $bottom: initial, $left: initial) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin flexColumns($columnsPC: 5, $columnsSP: 2, $gap: 20px) {
+  @include flex($gap: $gap, $align-items: flex-start);
+
+  & > * {
+    width: calc((100% - (#{$columnsPC} - 1) * #{$gap}) / #{$columnsPC});
+
+    @include mq(sp) {
+      width: calc((100% - (#{$columnsSP} - 1) * #{$gap}) / #{$columnsSP});
+    }
+  }
+}
+
+@mixin responsiveRectImage($heightRatio) {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: $heightRatio;
+  }
+
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    object-fit: cover;
+  }
+}
+
+@mixin fadeInOut($fadeTimeSec: 0.4s) {
+  visibility: hidden;
+  opacity: 0;
+  transition: all $fadeTimeSec ease;
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@mixin toggleDisplay($displayWhenActive: block) {
+  display: none;
+
+  &.is-active {
+    display: $displayWhenActive;
+  }
+}
+
+@mixin captureButton() {
+  position: relative;
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  border: solid 4px rgb(182, 163, 123);
+  background-color: rgba(rgb(182, 163, 123), 0.2);
+  transform: scale(1.2);
+
+  &::after {
+    content: "";
+    display: block;
+    @include posAbs(0, 0, 0, 0);
+    margin: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 30px;
+    background-color: rgb(182, 163, 123);
+  }
+}
+
+@mixin buttonBase() {
+  display: block;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 40px;
+  text-align: center;
+  border-radius: 28px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "starry-digitizer-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "run-s dev:build:** && run-p dev:watch:**",
+    "dev:build:sass": "sass  \"./scss/style.scss\" ./style.css",
+    "dev:watch:sass": "onchange \"./scss/**\" -- bun dev:build:sass",
+    "dev:watch:browse": "browser-sync start --server --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t29mato/starry-digitizer-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t29mato/starry-digitizer-website/issues"
+  },
+  "homepage": "https://github.com/t29mato/starry-digitizer-website#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "sass": "^1.72.0"
+  }
+}
