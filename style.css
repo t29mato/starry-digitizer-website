@@ -1,5 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Ubuntu:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@400;500&display=swap");
 html,
 body,
 p,
@@ -88,13 +88,23 @@ select {
   background: none;
 }
 
-html,
 body {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
+  color: #838383;
 }
 
 a {
   color: inherit;
+}
+
+video,
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 40px;
 }
 
 .header {
@@ -112,6 +122,162 @@ a {
 }
 .header_left {
   font-size: 1.2rem;
+}
+.header_right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.header_link {
+  text-decoration: none;
+}
+.header_link--launch-app {
+  text-decoration: none;
+  border: solid 2px white;
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+.intro_contents {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.intro_title {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.intro_demo-slides {
+  position: relative;
+  width: 66.5%;
+  margin: 0 auto 40px;
+}
+.intro_demo-slides_img {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.intro_demo-slides_img.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+.intro_demo-slides_img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.intro_description {
+  text-align: center;
+}
+
+.features_contents {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.features_title {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.features_inner-box {
+  background-color: #d2e6ff;
+  padding: 80px 60px;
+}
+.features_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.features_item_texts {
+  width: calc(40% - 40px);
+}
+.features_item_video {
+  width: 60%;
+}
+.features_item_title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.features_item_summary {
+  margin-bottom: 16px;
+}
+.features_link-to-docs {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.why-starry_contents {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.why-starry_title {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.why-starry_description {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.contribute-us {
+  margin-bottom: 60px;
+}
+.contribute-us_contents {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.contribute-us_title {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.contribute-us_message {
+  text-align: center;
+}
+.contribute-us_link-to-github-issues {
+  display: block;
+  width: 120px;
+  margin: 0 auto 24px;
+}
+
+.footer {
+  background-color: #3d3d3d;
+  padding: 80px 40px;
+}
+.footer_contents {
+  max-width: 720px;
+  margin: 0 auto;
+  color: white;
+}
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer_links a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=style.css.map */

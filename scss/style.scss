@@ -1,17 +1,42 @@
 @import "reset.scss";
 @import "mixins.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Ubuntu:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@400;500&display=swap");
 
 $c_mainBlue: #1b71df;
+$c_paleBlue: #d2e6ff;
+$c_gray: #838383;
+$c_darkGray: #3d3d3d;
 
-html,
+@mixin sectionContents {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+@mixin sectionTitle {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
+  color: $c_gray;
 }
 
 a {
   color: inherit;
+}
+
+video,
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 40px;
 }
 
 .header {
@@ -24,5 +49,158 @@ a {
 
   &_left {
     font-size: 1.2rem;
+  }
+
+  &_right {
+    @include flex($align-items: center, $gap: 24px);
+  }
+
+  &_link {
+    text-decoration: none;
+
+    &--launch-app {
+      text-decoration: none;
+      border: solid 2px white;
+      border-radius: 6px;
+      padding: 4px 12px;
+    }
+  }
+}
+
+.intro {
+  &_contents {
+    @include sectionContents();
+  }
+
+  &_title {
+    @include sectionTitle();
+  }
+
+  &_demo-slides {
+    position: relative;
+    width: 66.5%;
+    margin: 0 auto 40px;
+
+    &_img {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1.5s ease;
+
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &_img:not(:first-child) {
+      @include posAbs(0, 0, 0, 0);
+    }
+  }
+
+  &_description {
+    text-align: center;
+  }
+}
+
+.features {
+  &_contents {
+    @include sectionContents();
+  }
+
+  &_title {
+    @include sectionTitle();
+  }
+
+  &_inner-box {
+    background-color: $c_paleBlue;
+    padding: 80px 60px;
+  }
+
+  &_item {
+    @include flex($gap: 40px);
+    margin-bottom: 40px;
+
+    &_texts {
+      width: calc(40% - 40px);
+    }
+
+    &_video {
+      width: 60%;
+    }
+
+    &_title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &_summary {
+      margin-bottom: 16px;
+    }
+  }
+
+  &_link-to-docs {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.why-starry {
+  &_contents {
+    @include sectionContents();
+  }
+
+  &_title {
+    @include sectionTitle();
+  }
+
+  &_description {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.contribute-us {
+  margin-bottom: 60px;
+
+  &_contents {
+    @include sectionContents();
+  }
+
+  &_title {
+    @include sectionTitle();
+  }
+
+  &_message {
+    text-align: center;
+  }
+
+  &_link-to-github-issues {
+    display: block;
+    width: 120px;
+    margin: 0 auto 24px;
+  }
+}
+
+.footer {
+  background-color: $c_darkGray;
+  padding: 80px 40px;
+
+  &_contents {
+    max-width: 720px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  &_links {
+    @include flex($justify-content: space-between);
+
+    & a {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 28px;
+      font-size: 0.9rem;
+    }
   }
 }
