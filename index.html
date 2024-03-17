@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StarryDigitizer</title>
+  <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="style.css">
   <!-- TODO: Add OGP -->
 </head>
+
 <body>
   <header id="header" class="header">
-    <div class="header_right">
+    <div class="header_left">
       <h1 class="header_main-title">StarryDigitizer</h1>
     </div>
-    <div class="header_left">
-      <a class="header_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Contact</a>
+    <div class="header_right">
+      <a class="header_link"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0"
+        target="_blank">Contact</a>
       <a class="header_link" href="https://github.com/t29mato/starry-digitizer" target="_blank">GitHub</a>
       <a class="header_link--launch-app" href="https://app.digitizer.starrydata.org/" target="_blank">Launch App</a>
     </div>
@@ -30,7 +35,8 @@
     <p class="intro_description">
       StarryDigitizer is an open source value extraction tool that operates in a web browser.
       <br>
-      Users can upload any graph image and swiftly and accurately extract data values using multiple automated extraction logics.
+      Users can upload any graph image and swiftly and accurately extract data values using multiple automated
+      extraction logics.
       <br>
       Since the images are not sent tothe server, there is no need to worry about rights-related concerns.
     </p>
@@ -43,13 +49,14 @@
         <div class="features_contents_item_texts">
           <h3 class="features_contents_item_title">Automatic Extraction<br>by Color</h3>
           <p class="features_contents_item_summary">
-            The system automatically extracts values from the graph based on the specified color. 
+            The system automatically extracts values from the graph based on the specified color.
           </p>
           <p class="features_contents_item_summary">
             Color options are presented to the user automatically, utilizing color information within the graph image.
           </p>
           <p class="features_contents_item_summary">
-            There are two modes available: Line Extract mode, suitable for extracting line graphs, and Symbol Extract mode, ideal for extracting symbols in scatter plots.
+            There are two modes available: Line Extract mode, suitable for extracting line graphs, and Symbol Extract
+            mode, ideal for extracting symbols in scatter plots.
           </p>
         </div>
         <div class="features_contents_item_video">
@@ -60,30 +67,34 @@
         <div class="features_contents_item_texts">
           <h3>Spline Interpolation</h3>
           <p class="features_contents_item_summary">
-            In cases where automatic extraction based on color is challenging, especially with complex graph images, if its a curved graph, you can use the spline interpolation feature.
+            In cases where automatic extraction based on color is challenging, especially with complex graph images, if
+            its a curved graph, you can use the spline interpolation feature.
           </p>
           <p class="features_contents_item_summary">
-            This feature allows users to obtain values along the graph lines at any desired interval with minimal clicks.
+            This feature allows users to obtain values along the graph lines at any desired interval with minimal
+            clicks.
             <br>
           </p>
           <p class="features_contents_item_summary">
-            During the operation, the interpolation lines are updated in real-time, providing a clear visual indication of which portions of the graph values can be extracted with just a glance.
+            During the operation, the interpolation lines are updated in real-time, providing a clear visual indication
+            of which portions of the graph values can be extracted with just a glance.
           </p>
         </div>
         <div class="features_contents_item_video">
           <video src="videos/spline-interpolation.mp4" controls muted></video>
         </div>
       </div>
-      <p class="features_link-to-docs">See all features in the <a hred="https://starrydigitizer.readthedocs.io/en/latest/" target="_blank">document</a></p>
+      <p class="features_link-to-docs">See all features in the <a
+          hred="https://starrydigitizer.readthedocs.io/en/latest/" target="_blank">document</a></p>
     </div>
   </section>
 
   <section id="why-starry" class="why-starry">
     <h2 class="why-starry_title">Why "Starry"?</h2>
     <p class="why-starry_description">
-      StarryDigitizer was originally developed as part of the web system of Starrydata project, 
+      StarryDigitizer was originally developed as part of the web system of Starrydata project,
       <br>
-      which is aimed at building an open database of inorganic materials science experimental data, 
+      which is aimed at building an open database of inorganic materials science experimental data,
       <br>
       with the motivation to streamline the process of extracting graph data
       <br>
@@ -106,13 +117,15 @@
       <br>
       or if you are willing to help with our development,
       <br>
-      please feel free to create an issue on <a href="https://github.com/t29mato/starry-digitizer/issues" target="_blank">GitHub</a>.
+      please feel free to create an issue on <a href="https://github.com/t29mato/starry-digitizer/issues"
+        target="_blank">GitHub</a>.
     </p>
   </section>
 
   <section id="contact" class="contact">
     <h2 class="contact_title">Contact</h2>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Open Contact Form</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRc4N6xdMUPv8UElA9wb1HyfcjK7Ez_KeM-SCsglI9FZaq4A/viewform?vc=0&c=0&w=1&flr=0"
+      target="_blank">Open Contact Form</a>
   </section>
 
   <footer id="foooter" class="footer">
@@ -135,4 +148,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>

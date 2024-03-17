@@ -1,2 +1,28 @@
-@import 'reset.scss';
-@import 'mixins.scss';
+@import "reset.scss";
+@import "mixins.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Ubuntu:wght@400;500&display=swap");
+
+$c_mainBlue: #1b71df;
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  @include flex($align-items: center, $justify-content: space-between);
+  height: 54px;
+  padding: 0 40px;
+  background-color: $c_mainBlue;
+  font-family: "ubuntu", sans-serif;
+  color: white;
+
+  &_left {
+    font-size: 1.2rem;
+  }
+}
