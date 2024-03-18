@@ -37,15 +37,28 @@ img {
 
 section {
   padding: 60px 40px;
+
+  @include mq(sp) {
+    padding: 40px 20px;
+  }
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
   @include flex($align-items: center, $justify-content: space-between);
-  height: 54px;
-  padding: 0 40px;
+  padding: 8px 40px;
   background-color: $c_mainBlue;
   font-family: "ubuntu", sans-serif;
   color: white;
+  z-index: 5;
+
+  @include mq(sp) {
+    position: relative;
+    flex-direction: column;
+    gap: 16px;
+  }
 
   &_left {
     font-size: 1.2rem;
@@ -68,6 +81,12 @@ section {
 }
 
 .intro {
+  padding-top: 120px;
+
+  @include mq(sp) {
+    padding-top: 40px;
+  }
+
   &_contents {
     @include sectionContents();
   }
@@ -80,6 +99,10 @@ section {
     position: relative;
     width: 66.5%;
     margin: 0 auto 40px;
+
+    @include mq(sp) {
+      width: 100%;
+    }
 
     &_img {
       visibility: hidden;
@@ -114,18 +137,34 @@ section {
   &_inner-box {
     background-color: $c_paleBlue;
     padding: 80px 60px;
+
+    @include mq(sp) {
+      padding: 40px 20px;
+    }
   }
 
   &_item {
     @include flex($gap: 40px);
     margin-bottom: 40px;
 
+    @include mq(sp) {
+      display: block;
+    }
+
     &_texts {
       width: calc(40% - 40px);
+
+      @include mq(sp) {
+        width: 100%;
+      }
     }
 
     &_video {
       width: 60%;
+
+      @include mq(sp) {
+        width: 100%;
+      }
     }
 
     &_title {

@@ -106,19 +106,34 @@ img {
 section {
   padding: 60px 40px;
 }
+@media screen and (max-width: 640px) {
+  section {
+    padding: 40px 20px;
+  }
+}
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 54px;
-  padding: 0 40px;
+  padding: 8px 40px;
   background-color: #1b71df;
   font-family: "ubuntu", sans-serif;
   color: white;
+  z-index: 5;
+}
+@media screen and (max-width: 640px) {
+  .header {
+    position: relative;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 .header_left {
   font-size: 1.2rem;
@@ -141,6 +156,14 @@ section {
   padding: 4px 12px;
 }
 
+.intro {
+  padding-top: 120px;
+}
+@media screen and (max-width: 640px) {
+  .intro {
+    padding-top: 40px;
+  }
+}
 .intro_contents {
   margin: 0 auto;
   max-width: 960px;
@@ -155,6 +178,11 @@ section {
   position: relative;
   width: 66.5%;
   margin: 0 auto 40px;
+}
+@media screen and (max-width: 640px) {
+  .intro_demo-slides {
+    width: 100%;
+  }
 }
 .intro_demo-slides_img {
   visibility: hidden;
@@ -190,6 +218,11 @@ section {
   background-color: #d2e6ff;
   padding: 80px 60px;
 }
+@media screen and (max-width: 640px) {
+  .features_inner-box {
+    padding: 40px 20px;
+  }
+}
 .features_item {
   display: flex;
   justify-content: flex-start;
@@ -199,11 +232,26 @@ section {
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 640px) {
+  .features_item {
+    display: block;
+  }
+}
 .features_item_texts {
   width: calc(40% - 40px);
 }
+@media screen and (max-width: 640px) {
+  .features_item_texts {
+    width: 100%;
+  }
+}
 .features_item_video {
   width: 60%;
+}
+@media screen and (max-width: 640px) {
+  .features_item_video {
+    width: 100%;
+  }
 }
 .features_item_title {
   font-size: 1.2rem;
