@@ -12,8 +12,20 @@
   <meta property="og:title" content="StarryDigitizer" />
   <meta property="og:site_name" content="StarryDigitizer" />
   <meta property="og:description" content="StarryDigitizer is an open source value extraction tool that operates in a web browser. Users can upload any graph image and swiftly and accurately extract data values using multiple automated extraction logics. Since the images are not sent to the server, there is no need to worry about rights-related concerns." />
-  <meta property="og:url" content="https://digitizer.starrydata.org/" />
+  <meta property="og:url" content="https://digitizer.starrydata.org" />
   <meta property="og:type" content="website" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QDX98GT94"></script>
+  <script>
+    if (location.host === 'digitizer.starrydata.org') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9QDX98GT94');
+    }
+  </script>
 </head>
 
 <body>
